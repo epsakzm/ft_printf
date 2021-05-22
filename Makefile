@@ -1,27 +1,25 @@
-NAME		=	libftprintf.a
+SRCS=parser.c util.c write_char.c write_hex.c write_num.c\
+write_pointer.c write_string.c ft_printf.c write_util.c
+OBJS=$(SRCS:.c=.o)
+TARGET=libftprintf.a
+MLIB=ar rc
+CFLAGS= -Wall -Wextra -Werror
+CC=gcc
 
-CC			=	gcc
+all : $(TARGET)
 
-CFLAGS		=	-Wall -Wextra -Werror 
+$(TARGET) : $(OBJS)
+	$(MLIB) $(TARGET) $(OBJS)
 
-RM			=	rm -f
+%($(OBJS)) : $(SRCS)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-SRCS		=	ft_printf.c \
+clean :
+	rm -f $(OBJS)
 
-OBJS		=	$(SRCS:.c=.o)
+fclean : clean
+	rm -f $(TARGET)
 
+re : fclean all
 
-all			:	$(NAME)
-
-$(NAME)		:	$(OBJS)
-				ar rcs $(NAME) $(OBJS)
-
-clean		:
-				$(RM) $(OBJS)
-
-fclean		:	clean
-				$(RM) $(NAME)
-
-re			:	fclean all
-
-.PHONY		:	all clean fclean re
+.PHONY : clean fclean all re
