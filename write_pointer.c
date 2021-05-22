@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   write_pointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: donghwik <donghwik@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: hyeopark <hyeopark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/27 17:30:37 by donghwik          #+#    #+#             */
-/*   Updated: 2021/04/08 12:02:02 by donghwik         ###   ########.fr       */
+/*   Created: 2021/03/27 17:30:37 by hyeopark          #+#    #+#             */
+/*   Updated: 2021/05/22 17:23:55 by hyeopark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
